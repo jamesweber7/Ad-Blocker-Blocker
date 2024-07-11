@@ -1,0 +1,93 @@
+fakeviruspopup {
+    display: block;
+    background-color: rgb(229,222,208);
+    position: fixed;
+    border-top: none;
+    border-left: 1px solid #777;
+    border-right: 2px solid #555;
+    border-bottom: 2px solid #333;
+    font-family: 'fangsong';
+    min-width: 140px;
+}
+
+fakeviruspopup header {
+    display: block;
+    background-image: linear-gradient(to bottom, rgb(9,22,167), rgb(6, 16, 119));
+    color: white;
+    padding: 4px;
+}
+
+fakeviruspopup header button.close {
+    float: right;
+    width: 20px;
+    height: 20px;
+
+    background-image: linear-gradient(to bottom, rgb(202, 0, 0), rgb(62, 0, 0));
+
+    color: white;
+    border: 1px solid white;
+
+    padding: 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+fakeviruspopup header button.close.disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+fakeviruspopup content {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+fakeviruspopup content button {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: none;
+    background: #eee;
+}
+
+fakeviruspopup content button:hover {
+    background: #ccc;
+}
+
+fakeviruspopup content button:active {
+    background: #999;
+}
+
+.exit-canvas-left {
+    animation: exit-canvas-left 2s forwards;
+}
+
+@keyframes exit-canvas-left {
+    from {
+        transform: translate(0,0) scale(-1,1);
+    }
+    to {
+        transform: translate(-100vw,0) scale(-1, 1);
+    }
+}
+
+.bee-shake {
+    animation: bee-shake 2s forwards;
+}
+
+@keyframes bee-shake {
+    from, to {
+        transform: rotate(0);
+    }
+    5%, 25%, 45%, 65%, 85% {
+        transform: rotate(20deg);
+    }
+    15%, 35%, 55%, 75%, 95% {
+        transform: rotate(-20deg);
+    }
+}
